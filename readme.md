@@ -77,3 +77,7 @@ sass: 'resources/assets/sass/emails/email.scss',
 ## Notices
 
 Current plugin freezes gulp flow until all it's works will be done. Because I can't find better way to run several streams in elixir gulp task without callback.
+
+Css inliner removes all `<link rel="stylesheet" type="text/css" href="*">` tags in production mode.
+To add styles to compiled styles in head put it into `<style type="text/css" media="screen"></style` in head.
+You can add @font-face and etc. Or correct bugs in compiled styles. Supports blade syntax as well.
