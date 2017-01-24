@@ -1,0 +1,49 @@
+{
+  "name": "laravel-elixir-foundation-emails",
+  "version": "1.0.0",
+  "author": "Daniil Kostin <ddkostin@gmail.com>",
+  "description": "Laravel Foundation Emails 2 integration",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dan-leech/laravel-elixir-foundation-emails.git"
+  },
+  "homepage": "https://github.com/dan-leech/laravel-elixir-foundation-emails#readme",
+  "scripts": {
+    "compile": "babel --presets=es2015 -d dist src",
+    "prepublish": "npm run compile"
+  },
+  "keywords": [
+    "laravel",
+    "elixir",
+    "email",
+    "foundation",
+    "inky",
+    "gulp"
+  ],
+  "bugs": {
+    "url": "https://github.com/dan-leech/laravel-elixir-foundation-emails/issues"
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "deasync": "^0.1.9",
+    "del": "^2.2.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-util": "^3.0.8",
+    "inky": "^1.3.7",
+    "lazypipe": "^1.0.1",
+    "lodash": "^4.15.0",
+    "siphon-media-query": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0"
+  }
+}
