@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-foundation-emails",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Daniil Kostin <ddkostin@gmail.com>",
   "description": "Laravel Foundation Emails 2 integration",
   "main": "dist/index.js",
