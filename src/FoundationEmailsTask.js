@@ -37,7 +37,8 @@ class FoundationEmailsTask extends Elixir.Task {
         $.sourcemaps = require('gulp-sourcemaps');
         $.sass = require('gulp-sass');
         $.imagemin = require('gulp-imagemin');
-        $.uncss = require('gulp-uncss');
+        $.postcss = require('gulp-postcss');
+        $.uncss = require('postcss-uncss');
         $.htmlmin = require('gulp-htmlmin');
         $.inlineCss = require('gulp-inline-css');
         $.replace = require('gulp-replace');
@@ -204,10 +205,10 @@ class FoundationEmailsTask extends Elixir.Task {
             .pipe($.sass({
                 errLogToConsole: true
             }).on('error', $.sass.logError))
-            .pipe($.if(Elixir.config.production, $.uncss(
+            .pipe($.if(Elixir.config.production, $.postcss([$.uncss(
                 {
                     html: [config.views + '/**/*.blade.php']
-                })))
+                })])))
             .pipe($.if(Elixir.config.sourcemaps, $.sourcemaps.write()))
             .pipe($.if(!Elixir.config.production, gulp.dest(config.publicCss)))
             .pipe(gulp.dest(config.compiled + '/css'));
